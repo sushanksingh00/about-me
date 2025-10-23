@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - Sushank Singh</title>
+
+  <style>
+    /* 🌈 Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fafb;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0077ff;
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: #0077ff;
+      margin-bottom: 1rem;
+      border-left: 5px solid #0077ff;
+      padding-left: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    ul li {
+      margin: 0.5rem 0;
+      padding-left: 10px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: "•";
+      color: #0077ff;
+      position: absolute;
+      left: -10px;
+    }
+
+    a {
+      color: #0077ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #eee;
+      color: #444;
+      border-top: 1px solid #ddd;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #0077ff;
+      font-weight: bold;
+    }
+
+    /* 📱 Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      section {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hello, I'm Sushank Singh 👋</h1>
+    <p>A passionate Software Engineering student at VIT-AP</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m a fresher programmer who loves solving problems and building web apps.
+      I have experience with <strong>Flask, SQL, HTML, CSS, and C++</strong>.
+      My dream is to become a software engineer and a good person in life.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><a href="https://github.com/sushanksingh00/First-Hackathon" target="_blank">AI Medical Advisor</a> – built with Flask & Gemini AI</li>
+      <li>Finance App – real-time stock simulation with virtual currency</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Connect with me on 
+      <a href="https://github.com/sushanksingh00" target="_blank">GitHub</a>
+    </p>
+  </footer>
+</body>
+</html>
