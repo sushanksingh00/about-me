@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Achievements - Sushank Singh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', sans-serif; background: #f9fafb; color: #333; line-height: 1.6; }
+    body { font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; background: #DED6CE; }
     html { scroll-behavior: smooth; }
     nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #e5e7eb; z-index: 1000; }
     .navbar { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; position: relative; }
@@ -25,17 +26,16 @@
       #nav-toggle:checked + label + ul { display: flex; }
       .navbar a { display: block; }
     }
-    header { background: #0077ff; color: white; text-align: center; padding: 3rem 1rem; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    header { background: transparent; color: #333; padding: 3rem 1rem; box-shadow: none; border-bottom-left-radius: 0; border-bottom-right-radius: 0; text-align: center; }
     header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
     header p { font-size: 1.1rem; opacity: 0.9; }
-    section { padding: 2rem; max-width: 800px; margin: 2rem auto; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-    h2 { color: #0077ff; margin-bottom: 1rem; border-left: 5px solid #0077ff; padding-left: 10px; }
+    section { padding: 2rem; max-width: 800px; margin: 2rem auto; background: transparent; border-radius: 0; box-shadow: none; }
+    h2 { color: #333; margin-bottom: 1rem; border-left: none; padding-left: 0; }
     ul { list-style: none; padding-left: 1rem; }
     ul li { margin: 0.5rem 0; padding-left: 10px; position: relative; }
     ul li::before { content: "•"; color: #0077ff; position: absolute; left: -10px; }
-    a { color: #0077ff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    footer { text-align: center; padding: 1.5rem; background: #eee; color: #444; border-top: 1px solid #ddd; font-size: 0.9rem; }
+    a, .navbar .brand, .navbar a:hover { color: #333; }
+    footer { background: #DED6CE; border-top: none; text-align: center; padding: 1.5rem; color: #444; font-size: 0.9rem; }
     footer a { color: #0077ff; font-weight: bold; }
   </style>
 </head>
@@ -47,7 +47,6 @@
       <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">☰</label>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
         <li><a class="active" href="achievements.html">Achievements</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="connect.html">Connect</a></li>

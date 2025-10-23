@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home - Sushank Singh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     /* 🌈 Basic Reset */
@@ -14,8 +15,8 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9fafb;
+      font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      background: #DED6CE; /* updated background */
       color: #333;
       line-height: 1.6;
     }
@@ -86,13 +87,13 @@
     }
 
     header {
-      background: #0077ff;
-      color: white;
+      background: transparent; /* remove blue bar */
+      color: #333;
       text-align: center;
       padding: 3rem 1rem;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      box-shadow: none;
     }
 
     header h1 {
@@ -109,16 +110,16 @@
       padding: 2rem;
       max-width: 800px;
       margin: 2rem auto;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      background: transparent; /* no box */
+      border-radius: 0;         /* no rounded corners */
+      box-shadow: none;         /* no shadow */
     }
 
     h2 {
       color: #0077ff;
       margin-bottom: 1rem;
-      border-left: 5px solid #0077ff;
-      padding-left: 10px;
+      border-left: none;   /* removed left line */
+      padding-left: 0;     /* removed offset */
     }
 
     ul {
@@ -151,9 +152,9 @@
     footer {
       text-align: center;
       padding: 1.5rem;
-      background: #eee;
+      background: #DED6CE; /* match page bg */
       color: #444;
-      border-top: 1px solid #ddd;
+      border-top: none;
       font-size: 0.9rem;
     }
 
@@ -173,11 +174,15 @@
       }
     }
 
-    /* Explore Links */
-    .links { display: flex; flex-wrap: wrap; gap: 0.75rem; padding-left: 0; }
-    .links li::before { content: none; }
-    .links a { display: inline-block; background: #f1f5f9; border: 1px solid #e5e7eb; padding: 0.6rem 0.9rem; border-radius: 10px; font-weight: 600; }
-    .links a:hover { background: #e6f0ff; color: #0077ff; }
+    /* Home About with photo */
+    .about-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 1.5rem; align-items: stretch; }
+    .about-photo { width: 100%; min-height: 360px; }
+    .about-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .about-photo { min-height: 0; }
+      .about-photo img { height: auto; }
+    }
   </style>
 </head>
 <body>
@@ -187,7 +192,6 @@
       <input id="nav-toggle" type="checkbox" />
       <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">☰</label>
       <ul>
-        <li><a href="about.html">About</a></li>
         <li><a href="achievements.html">Achievements</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="connect.html">Connect</a></li>
@@ -197,17 +201,24 @@
 
   <header>
     <h1>Hello, I'm Sushank Singh 👋</h1>
-    <p>Software Engineering Student at VIT-AP</p>
+    <p>B. Tech. CSE Student at VIT-AP</p>
   </header>
 
-  <section id="quick-links">
-    <h2>Explore</h2>
-    <ul class="links">
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="achievements.html">Achievements</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="connect.html">Connect</a></li>
-    </ul>
+  <!-- Added About section back to the home page -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-grid">
+      <div class="about-photo">
+        <img src="IMG_20240219_024425_297.jpg" alt="Sushank Singh" />
+      </div>
+      <div class="about-content">
+        <p>
+          I’m a passionate programmer who enjoys solving problems and building full-stack web applications.
+          I have experience with <strong>Python, Django, Flask, SQL, Postman, and APIs</strong>.
+          Currently, I’m focused on improving my problem-solving skills and working on real-world projects.
+        </p>
+      </div>
+    </div>
   </section>
 
   <footer>
