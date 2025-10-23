@@ -67,3 +67,22 @@ footer a { color: #333; font-weight: 600; }
 .cards { display: grid; gap: 1rem; grid-template-columns: 1fr; }
 @media (min-width: 600px) { .cards { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 900px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+
+/* Interactive background (Connect page only) */
+.connect-page #bg-canvas { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+.connect-page nav,
+.connect-page header,
+.connect-page main,
+.connect-page footer { position: relative; z-index: 1; }
+
+/* Full-page interactive background canvas */
+#bg-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 0; /* behind navbar (which has higher z-index) */
+  pointer-events: none; /* don't block clicks */
+}
+
+/* Ensure content sits above canvas */
+nav, header, main, section, footer { position: relative; z-index: 1; }
