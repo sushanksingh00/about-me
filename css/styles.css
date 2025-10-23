@@ -28,7 +28,19 @@ nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #e5e7
 /* Responsive menu */
 @media (max-width: 700px) {
   .hamburger { display: block; }
-  .navbar ul { display: none; position: absolute; right: 1rem; top: 52px; background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); padding: 0.5rem; flex-direction: column; min-width: 200px; }
+  .navbar ul {
+    display: none;
+    position: fixed; /* overlay on top of content */
+    left: 0; right: 0;
+    top: 52px; /* approx nav height */
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    padding: 0.5rem;
+    flex-direction: column;
+    z-index: 3000; /* above header/content */
+  }
   #nav-toggle:checked + label + ul { display: flex; }
   .navbar a { display: block; }
 }
@@ -84,8 +96,8 @@ footer a { color: #333; font-weight: 600; }
   pointer-events: none; /* don't block clicks */
 }
 
-/* Ensure content sits above canvas */
-nav, header, main, section, footer { position: relative; z-index: 1; }
+/* Ensure content sits above canvas (do not override nav's z-index) */
+header, main, section, footer { position: relative; z-index: 1; }
 
 /* Skills section */
 .skills-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(3, 1fr); max-width: 1000px; margin: 0 auto; }
