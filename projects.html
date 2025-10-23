@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Sushank Singh</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f9fafb; color: #333; line-height: 1.6; }
+    html { scroll-behavior: smooth; }
+    nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #e5e7eb; z-index: 1000; }
+    .navbar { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; position: relative; }
+    .navbar .brand { font-weight: 700; color: #0077ff; }
+    .navbar ul { display: flex; gap: 0.5rem; list-style: none; padding: 0; margin: 0; }
+    .navbar ul li::before { content: none; }
+    .navbar a { color: #333; padding: 0.5rem 0.75rem; border-radius: 8px; font-weight: 500; text-decoration: none; }
+    .navbar a:hover { background: #f1f5f9; color: #0077ff; }
+    .navbar a.active { background: #f1f5f9; color: #0077ff; }
+    #nav-toggle { position: absolute; opacity: 0; pointer-events: none; }
+    .hamburger { display: none; font-size: 1.25rem; padding: 0.4rem 0.6rem; border-radius: 8px; cursor: pointer; }
+    section { scroll-margin-top: 80px; }
+    @media (max-width: 700px) {
+      .hamburger { display: block; }
+      .navbar ul { display: none; position: absolute; right: 1rem; top: 52px; background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); padding: 0.5rem; flex-direction: column; min-width: 200px; }
+      #nav-toggle:checked + label + ul { display: flex; }
+      .navbar a { display: block; }
+    }
+    header { background: #0077ff; color: white; text-align: center; padding: 3rem 1rem; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.1rem; opacity: 0.9; }
+    section { padding: 2rem; max-width: 800px; margin: 2rem auto; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    h2 { color: #0077ff; margin-bottom: 1rem; border-left: 5px solid #0077ff; padding-left: 10px; }
+    ul { list-style: none; padding-left: 1rem; }
+    ul li { margin: 0.5rem 0; padding-left: 10px; position: relative; }
+    ul li::before { content: "•"; color: #0077ff; position: absolute; left: -10px; }
+    a { color: #0077ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 1.5rem; background: #eee; color: #444; border-top: 1px solid #ddd; font-size: 0.9rem; }
+    footer a { color: #0077ff; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="navbar">
+      <a class="brand" href="index.html">Sushank Singh</a>
+      <input id="nav-toggle" type="checkbox" />
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">☰</label>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a class="active" href="projects.html">Projects</a></li>
+        <li><a href="connect.html">Connect</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Projects</h1>
+    <p>Things I've built and shipped</p>
+  </header>
+
+  <section id="projects">
+    <h2>Highlighted Projects</h2>
+    <ul>
+      <li><a href="https://github.com/sushanksingh00/First-Hackathon" target="_blank">AI Medical Advisor</a> – built with Flask & Gemini AI.</li>
+      <li>Finance App – real-time stock simulation with virtual currency and Yahoo API integration.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Connect with me on 
+      <a href="https://github.com/sushanksingh00" target="_blank">GitHub</a>
+    </p>
+  </footer>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me - Sushank Singh</title>
+  <title>Home - Sushank Singh</title>
 
   <style>
     /* 🌈 Basic Reset */
@@ -18,6 +18,71 @@
       background: #f9fafb;
       color: #333;
       line-height: 1.6;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    /* Top Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 1000;
+    }
+    .navbar {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      position: relative;
+    }
+    .navbar .brand {
+      font-weight: 700;
+      color: #0077ff;
+    }
+    .navbar ul {
+      display: flex;
+      gap: 0.5rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .navbar ul li::before { content: none; }
+    .navbar a {
+      color: #333;
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+    .navbar a:hover { background: #f1f5f9; color: #0077ff; }
+
+    /* Mobile menu */
+    #nav-toggle { position: absolute; opacity: 0; pointer-events: none; }
+    .hamburger { display: none; font-size: 1.25rem; padding: 0.4rem 0.6rem; border-radius: 8px; cursor: pointer; }
+
+    /* Ensure anchors don't hide under sticky nav */
+    section { scroll-margin-top: 80px; }
+
+    @media (max-width: 700px) {
+      .hamburger { display: block; }
+      .navbar ul {
+        display: none;
+        position: absolute;
+        right: 1rem;
+        top: 52px;
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        padding: 0.5rem;
+        flex-direction: column;
+        min-width: 200px;
+      }
+      #nav-toggle:checked + label + ul { display: flex; }
+      .navbar a { display: block; }
     }
 
     header {
@@ -107,28 +172,41 @@
         padding: 1.5rem;
       }
     }
+
+    /* Explore Links */
+    .links { display: flex; flex-wrap: wrap; gap: 0.75rem; padding-left: 0; }
+    .links li::before { content: none; }
+    .links a { display: inline-block; background: #f1f5f9; border: 1px solid #e5e7eb; padding: 0.6rem 0.9rem; border-radius: 10px; font-weight: 600; }
+    .links a:hover { background: #e6f0ff; color: #0077ff; }
   </style>
 </head>
 <body>
+  <nav>
+    <div class="navbar">
+      <a class="brand" href="index.html">Sushank Singh</a>
+      <input id="nav-toggle" type="checkbox" />
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">☰</label>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="connect.html">Connect</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <header>
     <h1>Hello, I'm Sushank Singh 👋</h1>
-    <p>A passionate Software Engineering student at VIT-AP</p>
+    <p>Software Engineering Student at VIT-AP</p>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I’m a fresher programmer who loves solving problems and building web apps.
-      I have experience with <strong>Flask, SQL, HTML, CSS, and C++</strong>.
-      My dream is to become a software engineer and a good person in life.
-    </p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="https://github.com/sushanksingh00/First-Hackathon" target="_blank">AI Medical Advisor</a> – built with Flask & Gemini AI</li>
-      <li>Finance App – real-time stock simulation with virtual currency</li>
+  <section id="quick-links">
+    <h2>Explore</h2>
+    <ul class="links">
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="achievements.html">Achievements</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="connect.html">Connect</a></li>
     </ul>
   </section>
 
