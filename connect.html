@@ -5,40 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Connect - Sushank Singh</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; background: #DED6CE; }
-    html { scroll-behavior: smooth; }
-    nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #e5e7eb; z-index: 1000; }
-    .navbar { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; position: relative; }
-    .navbar .brand { font-weight: 700; color: #0077ff; }
-    .navbar ul { display: flex; gap: 0.5rem; list-style: none; padding: 0; margin: 0; }
-    .navbar ul li::before { content: none; }
-    .navbar a { color: #333; padding: 0.5rem 0.75rem; border-radius: 8px; font-weight: 500; text-decoration: none; }
-    .navbar a:hover { background: #f1f5f9; color: #0077ff; }
-    .navbar a.active { background: #f1f5f9; color: #0077ff; }
-    #nav-toggle { position: absolute; opacity: 0; pointer-events: none; }
-    .hamburger { display: none; font-size: 1.25rem; padding: 0.4rem 0.6rem; border-radius: 8px; cursor: pointer; }
-    section { scroll-margin-top: 80px; }
-    @media (max-width: 700px) {
-      .hamburger { display: block; }
-      .navbar ul { display: none; position: absolute; right: 1rem; top: 52px; background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); padding: 0.5rem; flex-direction: column; min-width: 200px; }
-      #nav-toggle:checked + label + ul { display: flex; }
-      .navbar a { display: block; }
-    }
-    header { background: transparent; color: #333; padding: 3rem 1rem; box-shadow: none; border-bottom-left-radius: 0; border-bottom-right-radius: 0; text-align: center; }
-    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    header p { font-size: 1.1rem; opacity: 0.9; }
-    section { padding: 2rem; max-width: 800px; margin: 2rem auto; background: transparent; border-radius: 0; box-shadow: none; }
-    h2 { color: #333; margin-bottom: 1rem; border-left: none; padding-left: 0; }
-    ul { list-style: none; padding-left: 1rem; }
-    ul li { margin: 0.5rem 0; padding-left: 10px; position: relative; }
-    ul li::before { content: "•"; color: #0077ff; position: absolute; left: -10px; }
-    a, .navbar .brand, .navbar a:hover { color: #333; }
-    footer { background: #DED6CE; border-top: none; text-align: center; padding: 1.5rem; color: #444; font-size: 0.9rem; }
-    footer a { color: #0077ff; font-weight: bold; }
-    .card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <nav>
@@ -47,33 +14,34 @@
       <input id="nav-toggle" type="checkbox" />
       <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">☰</label>
       <ul>
-        <li><a href="index.html">Home</a></li>
         <li><a href="achievements.html">Achievements</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a class="active" href="connect.html">Connect</a></li>
+        <li><a href="connect.html" aria-current="page">Connect</a></li>
       </ul>
     </div>
   </nav>
 
   <header>
-    <h1>Connect With Me</h1>
-    <p>Reach out directly on any platform</p>
+    <h1>Connect with Me</h1>
+    <p>Find me on social platforms or reach out directly.</p>
   </header>
 
-  <section id="connect">
-    <h2>Profiles</h2>
-    <div class="card">📸 Instagram: <a href="https://www.instagram.com/29sushank/" target="_blank">@29sushank</a></div>
-    <div class="card">𝕏 X: <a href="https://x.com/2929sushank" target="_blank">@2929sushank</a></div>
-    <div class="card">💬 WhatsApp: <a href="https://wa.me/918318740001" target="_blank">Message me on WhatsApp</a></div>
-    <div class="card">📞 Phone: <a href="tel:+918318740001">+918318740001</a></div>
-    <div class="card">💻 GitHub: <a href="https://github.com/sushanksingh00" target="_blank">sushanksingh00</a></div>
-    <div class="card">🔗 LinkedIn: <a href="https://www.linkedin.com/in/sushank-singh-92a80731a/" target="_blank">Sushank Singh</a></div>
-  </section>
+  <main>
+    <section>
+      <h2>Profiles</h2>
+      <div class="cards">
+        <a class="card" href="https://www.instagram.com/ssj____007/" target="_blank" rel="noopener">Instagram →</a>
+        <a class="card" href="https://x.com/SSJ__007" target="_blank" rel="noopener">X (Twitter) →</a>
+        <a class="card" href="https://www.linkedin.com/in/sushank-singh-63ba9a319" target="_blank" rel="noopener">LinkedIn →</a>
+        <a class="card" href="https://wa.me/919450860835" target="_blank" rel="noopener">WhatsApp →</a>
+        <a class="card" href="tel:+919450860835">Call Me →</a>
+        <a class="card" href="https://github.com/sushanksingh00" target="_blank" rel="noopener">GitHub →</a>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>Connect with me on 
-      <a href="https://github.com/sushanksingh00" target="_blank">GitHub</a>
-    </p>
+    <p>Looking forward to connecting!</p>
   </footer>
 </body>
 </html>
