@@ -9,21 +9,9 @@
 </head>
 <body>
   <canvas id="bg-canvas" aria-hidden="true"></canvas>
-  <nav>
-    <div class="navbar">
-      <a class="brand" href="index.html">Sushank Singh</a>
-      <input id="nav-toggle" type="checkbox" />
-      <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">☰</label>
-      <ul>
-        <li><a href="achievements.html">Achievements</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="connect.html">Connect</a></li>
-      </ul>
-    </div>
-  </nav>
 
   <header>
-    <h1>Hello, I'm Sushank Singh 👋</h1>
+    <h1>Hello, I'm Sushank Singh</h1>
     <p>B. Tech. CSE Student at VIT-AP</p>
   </header>
 
@@ -31,7 +19,7 @@
     <h2>About Me</h2>
     <div class="about-grid">
       <div class="about-photo">
-        <img src="IMG_20240219_024425_297.jpg" alt="Sushank Singh" />
+        <img src="/Users/sushank/Documents/GitHub/about-me/about-me/IMG_20240219_024425_2971-removebg-preview.png" alt="Sushank Singh" />
       </div>
       <div class="about-content">
         <p>
@@ -94,6 +82,33 @@
     </div>
   </section>
 
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <ul>
+      <li> </li>Solved <strong>150+ DSA problems on LeetCode</strong> and <strong>50+ on GeeksforGeeks</strong>.</li>
+      <li><strong>2x Hackathon winner</strong> (includes <strong>D3 Hackathon</strong> (IIIT BH) - college level).</li>
+      <li>Selected for <strong>SIH 2025 (College Level)</strong>.</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>
+        <a href="https://github.com/sushanksingh00/Finance-App" target="_blank" rel="noopener">BullsBear Lab</a> — Demo trading web app to simulate buying/selling stocks with virtual currency. Live prices via Yahoo Finance, portfolio tracking, and transaction history. Built with Flask and SQLite3.
+      </li>
+      <li>
+        <a href="https://github.com/sushanksingh00/CareMap" target="_blank" rel="noopener">CareMap</a> — Web-based health assistant that suggests possible conditions from entered symptoms using the Gemini API. Includes login and saved history. Built with Flask and SQLite.
+      </li>
+      <li>
+        <a href="https://github.com/sushanksingh00/market-nearby" target="_blank" rel="noopener">Market Nearby</a> — Django app to find nearby shops (within 10 km) and check item availability, with roles for customer, shopkeeper, and admin.
+      </li>
+      <li>
+        <a href="https://github.com/Atharv714/Safe-Passage" target="_blank" rel="noopener">SafePassage</a> — Computes a safety index for road segments using checkpoints like potholes, accidents, road crowd index, lighting, and crime history, then recommends the safest route between origin and destination. Role: mobile sensor API and backend.
+      </li>
+    </ul>
+  </section>
+
   <section id="resume">
     <div class="cta">
       <a class="btn btn-lg" href="Main%20Resume%20(1).pdf" target="_blank" rel="noopener">View Resume</a>
@@ -123,6 +138,50 @@
       </div>
     </form>
   </section>
+
+  <section id="connect">
+    <h2>Connect</h2>
+    <div class="cards">
+      <a class="card" href="https://www.instagram.com/29sushank/" target="_blank" rel="noopener">Instagram →</a>
+      <a class="card" href="https://x.com/2929sushank/" target="_blank" rel="noopener">X (Twitter) →</a>
+      <a class="card" href="https://www.linkedin.com/in/sushank-singh-92a80731a/" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
+      <a class="card" href="https://github.com/sushanksingh00/" target="_blank" rel="noopener">GitHub →</a>
+    </div>
+  </section>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="#about" class="nav-item" aria-label="About">
+      <span class="nav-icon">
+        <img src="person-svgrepo-com.svg" width="22" height="22" alt="About" />
+      </span>
+      <span class="nav-label">About</span>
+    </a>
+    <a href="#skills" class="nav-item" aria-label="Skills">
+      <span class="nav-icon">
+        <img src="book-svgrepo-com.svg" width="22" height="22" alt="Skills" />
+      </span>
+      <span class="nav-label">Skills</span>
+    </a>
+    <a href="#achievements" class="nav-item" aria-label="Achievements">
+      <span class="nav-icon">
+        <img src="trophy-svgrepo-com.svg" width="22" height="22" alt="Achievements" />
+      </span>
+      <span class="nav-label">Wins</span>
+    </a>
+    <a href="#projects" class="nav-item" aria-label="Projects">
+      <span class="nav-icon">
+        <img src="project-presentation-svgrepo-com.svg" width="22" height="22" alt="Projects" />
+      </span>
+      <span class="nav-label">Work</span>
+    </a>
+    <a href="#contact" class="nav-item" aria-label="Chat">
+      <span class="nav-icon">
+        <img src="chat-round-dots-svgrepo-com.svg" width="22" height="22" alt="Chat" />
+      </span>
+      <span class="nav-label">Talk</span>
+    </a>
+  </nav>
 
   <footer>
     <p>Connect with me on 

@@ -87,7 +87,7 @@
         const dist = Math.hypot(dx, dy);
         if (dist < LINK_DIST) {
           const alpha = 1 - dist / LINK_DIST;
-          ctx.strokeStyle = `rgba(51,51,51,${alpha * 0.18})`;
+          ctx.strokeStyle = `rgba(255,255,255,${alpha * 0.18})`;
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
@@ -105,7 +105,7 @@
         const dist = Math.hypot(dx, dy);
         if (dist < MOUSE_LINK_DIST) {
           const alpha = 1 - dist / MOUSE_LINK_DIST;
-          ctx.strokeStyle = `rgba(51,51,51,${alpha * 0.25})`;
+          ctx.strokeStyle = `rgba(255,255,255,${alpha * 0.25})`;
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(mouse.x, mouse.y);
@@ -116,7 +116,7 @@
     }
 
     // draw dots
-    ctx.fillStyle = 'rgba(51,51,51,0.45)';
+    ctx.fillStyle = 'rgba(255,255,255,0.45)';
     for (const d of dots) {
       ctx.beginPath();
       ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
