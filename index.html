@@ -19,7 +19,8 @@
     <h2>About Me</h2>
     <div class="about-grid">
       <div class="about-photo">
-        <img src="IMG_20240219_024425_2971-removebg-preview.png" alt="Sushank Singh" />
+        <!-- <img src="IMG_20240219_024425_2971-removebg-preview.png" alt="Sushank Singh" /> -->
+        <img src="Gemini_Generated_Image_nv9sl9nv9sl9nv9s.png" alt="Sushank Singh" />
       </div>
       <div class="about-content">
         <p>
@@ -44,7 +45,7 @@
         </div>
         <div class="skill-item">
           <div class="skill-meta"><span>JavaScript</span></div>
-          <div class="bar"><span class="bar-fill" style="width:0%"></span></div>
+          <div class="bar"><span class="bar-fill" style="width:20%"></span></div>
         </div>
       </div>
 
@@ -151,36 +152,24 @@
 
   <!-- Bottom Navigation -->
   <nav class="bottom-nav">
-    <a href="#about" class="nav-item" aria-label="About">
-      <span class="nav-icon">
-        <img src="person-svgrepo-com.svg" width="22" height="22" alt="About" />
-      </span>
-      <span class="nav-label">About</span>
-    </a>
-    <a href="#skills" class="nav-item" aria-label="Skills">
-      <span class="nav-icon">
-        <img src="book-svgrepo-com.svg" width="22" height="22" alt="Skills" />
-      </span>
-      <span class="nav-label">Skills</span>
-    </a>
-    <a href="#achievements" class="nav-item" aria-label="Achievements">
-      <span class="nav-icon">
-        <img src="trophy-svgrepo-com.svg" width="22" height="22" alt="Achievements" />
-      </span>
-      <span class="nav-label">Wins</span>
-    </a>
-    <a href="#projects" class="nav-item" aria-label="Projects">
-      <span class="nav-icon">
-        <img src="project-presentation-svgrepo-com.svg" width="22" height="22" alt="Projects" />
-      </span>
-      <span class="nav-label">Work</span>
-    </a>
-    <a href="#contact" class="nav-item" aria-label="Chat">
-      <span class="nav-icon">
-        <img src="chat-round-dots-svgrepo-com.svg" width="22" height="22" alt="Chat" />
-      </span>
-      <span class="nav-label">Talk</span>
-    </a>
+    <div class="nav-center">
+      <a href="#about" class="nav-item" aria-label="About">
+        <span class="nav-icon"><img src="person-svgrepo-com.svg" width="18" height="18" alt="" /></span>
+        <span class="nav-label">About</span>
+      </a>
+      <a href="#skills" class="nav-item" aria-label="Skills">
+        <span class="nav-icon"><img src="book-svgrepo-com.svg" width="18" height="18" alt="" /></span>
+        <span class="nav-label">Skills</span>
+      </a>
+      <a href="#achievements" class="nav-item" aria-label="Achievements">
+        <span class="nav-icon"><img src="trophy-svgrepo-com.svg" width="18" height="18" alt="" /></span>
+        <span class="nav-label">Wins</span>
+      </a>
+      <a href="#contact" class="nav-item" aria-label="Resource">
+        <span class="nav-icon"><img src="chat-round-dots-svgrepo-com.svg" width="18" height="18" alt="" /></span>
+        <span class="nav-label">Resource</span>
+      </a>
+    </div>
   </nav>
 
   <footer>
@@ -189,5 +178,29 @@
     </p>
   </footer>
   <script src="js/bg.js" defer></script>
+  <script>
+    // Highlight current section in nav (white capsule)
+    (function(){
+      const items = Array.from(document.querySelectorAll('.bottom-nav .nav-item'));
+      const map = new Map(items.map(el => [el.getAttribute('href').replace('#',''), el]));
+      const observer = new IntersectionObserver((entries) => {
+        let activeId = null;
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            activeId = e.target.id;
+          }
+        }
+        if (activeId && map.has(activeId)) {
+          items.forEach(i => i.classList.remove('active'));
+          map.get(activeId).classList.add('active');
+        }
+      }, { rootMargin: '-40% 0px -40% 0px', threshold: 0.1 });
+
+      ['about','skills','achievements','contact'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) observer.observe(el);
+      });
+    })();
+  </script>
 </body>
 </html>

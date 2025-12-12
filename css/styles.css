@@ -3,11 +3,12 @@
 
 /* Theme palette */
 :root {
-  --color-bg: #222222;      /* soft peach */
-  --color-text: #ffffff;    /* black */
-  --color-accent: #169976;  /* blue accent */
-  --color-accent-2: #1DCD9F;/* lighter blue accent */
-  --color-card: #169976;    /* card background */
+  /* Serika Dark palette */
+  --color-bg: #1F1F1F;         /* deep charcoal */
+  --color-text: #EAE7DE;       /* warm cream */
+  --color-accent: #F5D06F;     /* serika yellow */
+  --color-accent-2: #C7A86B;   /* muted golden */
+  --color-card: #2A2A2A;       /* dark card */
 }
 
 /* Reset */
@@ -138,6 +139,7 @@ header, main, section, footer { position: relative; z-index: 1; }
 #contact form { max-width: 800px; margin: 0 auto; display: grid; gap: 0.9rem; }
 #contact label { font-weight: 600; color: var(--color-text); }
 .input, .textarea { width: 100%; padding: 0.7rem 0.85rem; border: 1px solid rgba(0,0,0,0.12); border-radius: 10px; background: #fff; color: var(--color-text); font: inherit; }
+.input, .textarea { width: 100%; padding: 0.7rem 0.85rem; border: 1px solid rgba(234,231,222,0.18); border-radius: 10px; background: var(--color-card); color: var(--color-text); font: inherit; }
 .textarea { min-height: 140px; resize: vertical; }
 .form-row { display: grid; gap: 0.9rem; grid-template-columns: 1fr 1fr; }
 @media (max-width: 700px) { .form-row { grid-template-columns: 1fr; } }
@@ -151,40 +153,57 @@ header, main, section, footer { position: relative; z-index: 1; }
   top: auto; /* prevent full-height stretch from global nav rule */
   left: 50%;
   transform: translateX(-50%);
-  width: min(92vw, 720px);
-  background: linear-gradient(180deg, rgba(0,0,0,0.92), rgba(0,0,0,0.88));
-  color: #eef2f7;
-  border: 1px solid rgba(115,158,201,0.28); /* accent-2 border */
+  width: min(92vw, 800px);
+  background: #202020;
+  color: var(--color-text);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 43px; /* pill shape */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.06);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.05);
   display: flex;
-  justify-content: space-around;
-  padding: 14px 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
   z-index: 100;
 }
 
+.nav-center { display: flex; gap: 26px; align-items: center; justify-content: center; width: 100%; }
+
+.nav-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid rgba(0,0,0,0.12);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+  text-decoration: none;
+}
+.nav-icon-btn:hover { transform: translateY(-1px); }
+
 .nav-item {
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
   align-items: center;
   text-decoration: none;
-  color: #eef2f7;
-  padding: 8px 12px;
+  color: var(--color-text);
+  padding: 8px 10px;
   border-radius: 16px;
-  transition: all 0.2s ease;
-  min-width: 48px;
+  transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  gap: 8px;
 }
 
-.nav-item:hover, .nav-item:focus {
-  color: #ffffff;
-  background: radial-gradient(closest-side, rgba(115,158,201,0.25), rgba(115,158,201,0.0));
-  transform: translateY(-1px);
+.nav-item:hover, .nav-item:focus { color: var(--color-accent); transform: translateY(-1px); }
+.nav-item.active {
+  background: #ffffff;
+  color: #000000;
+  padding: 8px 14px;
+  border-radius: 9999px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.20);
 }
 
-.nav-icon {
-  font-size: 20px;
-  margin-bottom: 4px;
-}
+.nav-icon { font-size: 20px; }
 
 /* Ensure SVG icons appear white against dark navbar */
 .nav-icon img {
@@ -194,9 +213,9 @@ header, main, section, footer { position: relative; z-index: 1; }
   filter: brightness(0) invert(1);
 }
 
-.nav-label {
-  display: none; /* icon-only look like screenshot */
-}
+.nav-label { display: inline-block; font-weight: 500; }
+
+/* removed right email capsule as per request */
 
 /* Add bottom padding to body to prevent content being hidden behind bottom nav */
 body { padding-bottom: 80px; }
