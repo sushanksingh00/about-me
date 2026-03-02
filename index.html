@@ -3,203 +3,285 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home - Sushank Singh</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Sushank Singh | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles-v2.css">
 </head>
 <body>
-  <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
-  <header>
-    <h1>Hello, I'm Sushank Singh</h1>
-    <p>B. Tech. CSE Student at VIT-AP</p>
-  </header>
+  <!-- Desktop Nav -->
+  <nav id="desktop-nav">
+    <div class="nav-brand">Sushank Singh</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
+  <!-- Hamburger Nav (mobile) -->
+  <nav id="hamburger-nav">
+    <div class="nav-brand">Sushank Singh</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / Profile -->
+  <section id="profile">
+    <div class="section__pic-container">
+      <div class="hero-circle">
+        <img src="assets/hero-circle.png" alt="Sushank Singh profile picture" />
+      </div>
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Sushank Singh</h1>
+      <p class="section__text__p2">B.Tech CSE Student &bull; Full Stack Developer</p>
+      <div class="btn-container">
+        <a href="assets/resume.pdf" target="_blank" rel="noopener" class="btn btn-outline">Download CV</a>
+        <a href="#contact" class="btn btn-filled">Contact Info</a>
+      </div>
+      <div id="socials-container">
+        <a href="https://www.linkedin.com/in/sushank-singh-92a80731a/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://github.com/sushanksingh00/" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
   <section id="about">
-    <h2>About Me</h2>
-    <div class="about-grid">
-      <div class="about-photo">
-        <img src="assets/profile.png" alt="Sushank Singh" />
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container about-pic">
+        <img src="assets/hero.png" alt="About Sushank Singh" />
       </div>
-      <div class="about-content">
-        <p>
-          I’m a B.Tech CSE student at VIT‑AP who builds simple, useful web apps. I’m strong in <strong>DSA</strong> with <strong>150+ LeetCode</strong> and <strong>50+ GFG</strong> problems, focusing on <strong>C++/Java</strong>, <strong>OOPS</strong>, patterns, and time/space complexity. I work with <strong>Python (Flask/Django)</strong>, <strong>SQLite/SQL</strong>, and <strong>REST APIs</strong>. Recent highlights: <strong>2× hackathon winner</strong> (incl. D3 Hackathon, IIIT BH) and <strong>SIH 2025 selection</strong>. Projects: <strong>BullsBear Lab</strong>, <strong>CareMap</strong>, <strong>Market Nearby</strong>, and <strong>SafePassage</strong> (mobile sensor API + backend).
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2>My Skills</h2>
-    <div class="skills-grid">
-      <div class="skill">
-        <h3>Frontend</h3>
-        <div class="skill-item">
-          <div class="skill-meta"><span>HTML</span></div>
-          <div class="bar"><span class="bar-fill" style="width:50%"></span></div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <h3>Experience</h3>
+            <p>3× Hackathon Winner<br/>SIH 2025 Selected<br/>1st Place AI/ML in HackSRM 7.0</p>
+          </div>
+          <div class="details-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 6 3 6 3s3 0 6-3v-5"/></svg>
+            <h3>Education</h3>
+            <p>B.Tech CSE '28<br/>VIT-AP University</p>
+          </div>
         </div>
-        <div class="skill-item">
-          <div class="skill-meta"><span>CSS</span></div>
-          <div class="bar"><span class="bar-fill" style="width:20%"></span></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-meta"><span>JavaScript</span></div>
-          <div class="bar"><span class="bar-fill" style="width:20%"></span></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <h3>Backend</h3>
-        <div class="skill-item">
-          <div class="skill-meta"><span>Flask</span></div>
-          <div class="bar"><span class="bar-fill" style="width:80%"></span></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-meta"><span>Django</span></div>
-          <div class="bar"><span class="bar-fill" style="width:80%"></span></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-meta"><span>SQLite3</span></div>
-          <div class="bar"><span class="bar-fill" style="width:60%"></span></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <h3>DSA</h3>
-        <div class="skill-item">
-          <div class="skill-meta"><span>C++</span></div>
-          <div class="bar"><span class="bar-fill" style="width:90%"></span></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-meta"><span>Java</span></div>
-          <div class="bar"><span class="bar-fill" style="width:50%"></span></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-meta"><span>OOPS</span></div>
-          <div class="bar"><span class="bar-fill" style="width:70%"></span></div>
+        <div class="text-container">
+          <p>
+            I'm a B.Tech CSE student at VIT‑AP who builds simple, useful web apps. Strong in DSA with 250+ LeetCode and 100+ GFG problems, focusing on C++/Java, OOPS, patterns, and time/space complexity. I work with Python (Flask/Django), SQLite/SQL, and REST APIs. Recent highlights include being a 3× hackathon winner (incl. D3 Hackathon, IIIT BH, HackSRM 7.0) and SIH 2025 selection.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="achievements">
-    <h2>Achievements</h2>
-    <ul>
-      <li> </li>Solved <strong>150+ DSA problems on LeetCode</strong> and <strong>50+ on GeeksforGeeks</strong>.</li>
-      <li><strong>2x Hackathon winner</strong> (includes <strong>D3 Hackathon</strong> (IIIT BH) - college level).</li>
-      <li>Selected for <strong>SIH 2025 (College Level)</strong>.</li>
-    </ul>
+  <!-- Experience -->
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="details-container">
+        <h2 class="experience-sub-title">Frontend Development</h2>
+        <div class="article-container">
+          <article>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div>
+              <h3>HTML</h3>
+              <p>Intermediate</p>
+            </div>
+          </article>
+          <article>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div>
+              <h3>CSS</h3>
+              <p>Basic</p>
+            </div>
+          </article>
+          <article>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div>
+              <h3>JavaScript</h3>
+              <p>Basic</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="details-container">
+        <h2 class="experience-sub-title">Backend &amp; DSA</h2>
+        <div class="article-container">
+          <article>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div>
+              <h3>Flask</h3>
+              <p>Experienced</p>
+            </div>
+          </article>
+          <article>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div>
+              <h3>Django</h3>
+              <p>Experienced</p>
+            </div>
+          </article>
+          <article>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div>
+              <h3>SQLite / SQL</h3>
+              <p>Intermediate</p>
+            </div>
+          </article>
+          <article>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div>
+              <h3>C++</h3>
+              <p>Experienced</p>
+            </div>
+          </article>
+          <article>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div>
+              <h3>Java</h3>
+              <p>Intermediate</p>
+            </div>
+          </article>
+          <article>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div>
+              <h3>Python</h3>
+              <p>Experienced</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- Projects -->
   <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>
-        <a href="https://github.com/sushanksingh00/Finance-App" target="_blank" rel="noopener">BullsBear Lab</a> — Demo trading web app to simulate buying/selling stocks with virtual currency. Live prices via Yahoo Finance, portfolio tracking, and transaction history. Built with Flask and SQLite3.
-      </li>
-      <li>
-        <a href="https://github.com/sushanksingh00/CareMap" target="_blank" rel="noopener">CareMap</a> — Web-based health assistant that suggests possible conditions from entered symptoms using the Gemini API. Includes login and saved history. Built with Flask and SQLite.
-      </li>
-      <li>
-        <a href="https://github.com/sushanksingh00/market-nearby" target="_blank" rel="noopener">Market Nearby</a> — Django app to find nearby shops (within 10 km) and check item availability, with roles for customer, shopkeeper, and admin.
-      </li>
-      <li>
-        <a href="https://github.com/Atharv714/Safe-Passage" target="_blank" rel="noopener">SafePassage</a> — Computes a safety index for road segments using checkpoints like potholes, accidents, road crowd index, lighting, and crime history, then recommends the safest route between origin and destination. Role: mobile sensor API and backend.
-      </li>
-    </ul>
-  </section>
-
-  <section id="resume">
-    <div class="cta">
-      <a class="btn btn-lg" href="assets/resume.pdf" target="_blank" rel="noopener">View Resume</a>
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn carousel-btn--left" aria-label="Previous" onclick="scrollCarousel(-1)">&#8249;</button>
+      <div class="carousel-track">
+        <div class="details-container project-card">
+          <h2 class="project-title">BullsBear Lab</h2>
+          <p class="project-desc">Demo trading web app to simulate buying/selling stocks with virtual currency. Live prices via Yahoo Finance, portfolio tracking, and transaction history. Built with Flask &amp; SQLite3. <strong>Solo project — completely built by me.</strong></p>
+          <div class="btn-container">
+            <a href="https://github.com/sushanksingh00/Finance-App" target="_blank" rel="noopener" class="btn btn-outline btn-sm">GitHub</a>
+          </div>
+        </div>
+        <div class="details-container project-card">
+          <h2 class="project-title">CareMap</h2>
+          <p class="project-desc">Web-based health assistant that suggests possible conditions from entered symptoms using the Gemini API. Includes login and saved history. Built with Flask &amp; SQLite. <strong>Solo project — completely built by me.</strong></p>
+          <div class="btn-container">
+            <a href="https://github.com/sushanksingh00/CareMap" target="_blank" rel="noopener" class="btn btn-outline btn-sm">GitHub</a>
+          </div>
+        </div>
+        <div class="details-container project-card">
+          <h2 class="project-title">Market Nearby</h2>
+          <p class="project-desc">Django app to find nearby shops (within 10 km) and check item availability, with roles for customer, shopkeeper, and admin. <strong>Solo project — completely built by me.</strong></p>
+          <div class="btn-container">
+            <a href="https://github.com/sushanksingh00/market-nearby" target="_blank" rel="noopener" class="btn btn-outline btn-sm">GitHub</a>
+          </div>
+        </div>
+        <div class="details-container project-card">
+          <h2 class="project-title">SafePassage</h2>
+          <p class="project-desc">Computes a safety index for road segments then recommends the safest route. <strong>Group project — my contributions: pothole detection API, ambulance siren detection ML model, and parts of the backend.</strong></p>
+          <div class="btn-container">
+            <a href="https://github.com/Atharv714/Safe-Passage" target="_blank" rel="noopener" class="btn btn-outline btn-sm">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn carousel-btn--right" aria-label="Next" onclick="scrollCarousel(1)">&#8250;</button>
     </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact">
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/xldpqewl" method="POST">
+    <p class="section__text__p1">Get In Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <p><a href="mailto:sushanksingh00@gmail.com">sushanksingh00@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        <p><a href="https://www.linkedin.com/in/sushank-singh-92a80731a/" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </div>
+    <form action="https://formspree.io/f/xldpqewl" method="POST" class="contact-form">
       <div class="form-row">
         <div>
           <label for="name">Name</label>
-          <input class="input" type="text" id="name" name="name" placeholder="Your name" required>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
         </div>
         <div>
           <label for="email">Email</label>
-          <input class="input" type="email" id="email" name="email" placeholder="your@email.com" required>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required />
         </div>
       </div>
       <div>
         <label for="message">Message</label>
-        <textarea class="textarea" id="message" name="message" placeholder="Write your message..." required></textarea>
+        <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
       </div>
-      <div class="actions">
-        <button class="btn btn-lg" type="submit">Send Message</button>
-
+      <div class="form-actions">
+        <button type="submit" class="btn btn-filled">Send Message</button>
       </div>
     </form>
-  </section>
 
-  <section id="connect">
-    <h2>Connect</h2>
-    <div class="cards">
-      <a class="card" href="https://www.instagram.com/29sushank/" target="_blank" rel="noopener">Instagram →</a>
-      <a class="card" href="https://x.com/2929sushank/" target="_blank" rel="noopener">X (Twitter) →</a>
-      <a class="card" href="https://www.linkedin.com/in/sushank-singh-92a80731a/" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
-      <a class="card" href="https://github.com/sushanksingh00/" target="_blank" rel="noopener">GitHub →</a>
+    <div class="socials-row">
+      <a href="https://www.instagram.com/29sushank/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://x.com/2929sushank/" target="_blank" rel="noopener">X (Twitter)</a>
+      <a href="https://www.linkedin.com/in/sushank-singh-92a80731a/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/sushanksingh00/" target="_blank" rel="noopener">GitHub</a>
     </div>
   </section>
-
-  <!-- Bottom Navigation -->
-  <nav class="bottom-nav">
-    <div class="nav-center">
-      <a href="#about" class="nav-item" aria-label="About">
-        <span class="nav-icon"><img src="assets/icons/person.svg" width="18" height="18" alt="" /></span>
-        <span class="nav-label">About</span>
-      </a>
-      <a href="#skills" class="nav-item" aria-label="Skills">
-        <span class="nav-icon"><img src="assets/icons/book.svg" width="18" height="18" alt="" /></span>
-        <span class="nav-label">Skills</span>
-      </a>
-      <a href="#achievements" class="nav-item" aria-label="Achievements">
-        <span class="nav-icon"><img src="assets/icons/trophy.svg" width="18" height="18" alt="" /></span>
-        <span class="nav-label">Wins</span>
-      </a>
-      <a href="#contact" class="nav-item" aria-label="Resource">
-        <span class="nav-icon"><img src="assets/icons/chat.svg" width="18" height="18" alt="" /></span>
-        <span class="nav-label">Resource</span>
-      </a>
-    </div>
-  </nav>
 
   <footer>
-    <p>Connect with me on 
-      <a href="https://github.com/sushanksingh00" target="_blank">GitHub</a>
-    </p>
+    <nav>
+      <ul class="nav-links footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p>Copyright &copy; 2026 Sushank Singh. All Rights Reserved.</p>
   </footer>
-  <script src="js/bg.js" defer></script>
-  <script>
-    // Highlight current section in nav (white capsule)
-    (function(){
-      const items = Array.from(document.querySelectorAll('.bottom-nav .nav-item'));
-      const map = new Map(items.map(el => [el.getAttribute('href').replace('#',''), el]));
-      const observer = new IntersectionObserver((entries) => {
-        let activeId = null;
-        for (const e of entries) {
-          if (e.isIntersecting) {
-            activeId = e.target.id;
-          }
-        }
-        if (activeId && map.has(activeId)) {
-          items.forEach(i => i.classList.remove('active'));
-          map.get(activeId).classList.add('active');
-        }
-      }, { rootMargin: '-40% 0px -40% 0px', threshold: 0.1 });
 
-      ['about','skills','achievements','contact'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) observer.observe(el);
-      });
-    })();
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.menu-links');
+      const icon = document.querySelector('.hamburger-icon');
+      menu.classList.toggle('open');
+      icon.classList.toggle('open');
+    }
+
+    function scrollCarousel(direction) {
+      const track = document.querySelector('.carousel-track');
+      const cardWidth = track.querySelector('.project-card').offsetWidth + 24; // card + gap
+      track.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+    }
   </script>
 </body>
 </html>
