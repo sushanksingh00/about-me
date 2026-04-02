@@ -664,3 +664,10 @@ footer p {
   font-size: 0.85rem;
   color: #aaa;
 }
+
+.advice{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}

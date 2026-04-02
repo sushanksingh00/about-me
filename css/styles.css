@@ -219,3 +219,4 @@ header, main, section, footer { position: relative; z-index: 1; }
 
 /* Add bottom padding to body to prevent content being hidden behind bottom nav */
 body { padding-bottom: 80px; }
+
