@@ -72,7 +72,7 @@ Django app to find shops within 10 km + check item availability.
 
 ---
 
-### 🔸 [SafePassage](https://github.com/Atharv714/Safe-Passage)
+### 🔸 [SafeMap](https://github.com/Demoninfinity02/SafeMap)
 Computes a road safety index using factors like accidents, lighting, crime, potholes, etc.  
 - Recommends safest route  
 - **Role:** Mobile sensor API + backend  
@@ -80,7 +80,7 @@ Computes a road safety index using factors like accidents, lighting, crime, poth
 ---
 
 ## 📄 Resume
-🔗 **[View My Resume](Main%20Resume%20(1).pdf)**
+🔗 **[View My Resume](Main%20Resume%20.pdf)**
 
 ---
 
