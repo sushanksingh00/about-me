@@ -325,17 +325,24 @@
     const analytics = getAnalytics(app);
     const db = getDatabase(app);
 
+    const el = document.getElementById("counter");
+
+    // show loading FIRST
+    el.innerText = "Loading...";
+
     const visitRef = ref(db, "visits");
 
-    //  increment on every load 
-    runTransaction(visitRef, (current) => {
-      return (current || 0) + 1;
+    // listen FIRST (important)
+    onValue(visitRef, (snapshot) => {
+      const value = snapshot.val();
+      if (value !== 1) {
+        el.innerText = `You are the ${value}th Viewer`;
+      }
     });
 
-    //  listen and display
-    onValue(visitRef, (snapshot) => {
-      document.getElementById("counter").innerText =
-        `You are the ${snapshot.val()}th Viewer`;
+    // increment AFTER listener is attached
+    runTransaction(visitRef, (current) => {
+      return (current || 0) + 1;
     });
   </script>
 </body>
