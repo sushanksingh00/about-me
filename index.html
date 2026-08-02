@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sushank Singh | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles-v2.css">
 </head>
 <body>
@@ -13,27 +14,39 @@
   <nav id="desktop-nav">
     <div class="nav-brand">Sushank Singh</div>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">about</a></li>
+      <li><a href="#stats">stats</a></li>
+      <li><a href="#experience">experience</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#contact">contact</a></li>
     </ul>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark and light mode" onclick="toggleTheme()">
+      <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
   </nav>
 
   <!-- Hamburger Nav (mobile) -->
   <nav id="hamburger-nav">
     <div class="nav-brand">Sushank Singh</div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="menu-links">
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    <div class="nav-right">
+      <button id="theme-toggle-mobile" class="theme-toggle" aria-label="Toggle dark and light mode" onclick="toggleTheme()">
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">about</a></li>
+          <li><a href="#stats" onclick="toggleMenu()">stats</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">contact</a></li>
+        </div>
       </div>
     </div>
   </nav>
@@ -46,19 +59,33 @@
       </div>
     </div>
     <div class="section__text">
-      <p class="section__text__p1">Hello, I'm</p>
-      <h1 class="title">Sushank Singh</h1>
-      <p class="section__text__p2">B.Tech CSE Student &bull; Full Stack Developer</p>
+      <!-- decorative rating-graph, purely ambient -->
+      <svg class="rating-graph" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <polyline points="0,140 30,120 60,128 90,90 120,100 150,60 180,72 210,40 240,50 270,22 300,30 340,10"
+          fill="none" stroke="var(--amber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="340" cy="10" r="4" fill="var(--amber)"/>
+      </svg>
+
+      <p class="section__text__p1 eyebrow-hero">hello, i'm</p>
+      <h1 class="title hero-name">Sushank Singh<span class="hero-cursor" aria-hidden="true"></span></h1>
+      <p class="section__text__p2">B.Tech CSE Student<span class="divider-dot">&bull;</span>Full Stack Developer</p>
+
+      <div class="badge-row">
+        <span class="badge"><span class="dot"></span>3&times; Hackathon Winner</span>
+        <span class="badge"><span class="dot"></span>SIH 2025 Selected</span>
+        <span class="badge"><span class="dot"></span>1st &mdash; AI/ML, HackSRM 7.0</span>
+      </div>
+
       <div class="btn-container">
         <a href="assets/resume.pdf" target="_blank" rel="noopener" class="btn btn-outline">Download CV</a>
         <a href="#contact" class="btn btn-filled">Contact Info</a>
       </div>
       <div id="socials-container">
         <a href="https://www.linkedin.com/in/sushank-singh-92a80731a/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
         </a>
         <a href="https://github.com/sushanksingh00/" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
         </a>
       </div>
     </div>
@@ -66,7 +93,7 @@
 
   <!-- About -->
   <section id="about">
-    <p class="section__text__p1">Get To Know More</p>
+    <p class="section__text__p1">get to know more</p>
     <h1 class="title">About Me</h1>
     <div class="section-container">
       <div class="section__pic-container about-pic">
@@ -75,157 +102,336 @@
       <div class="about-details-container">
         <div class="about-containers">
           <div class="details-container">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
             <h3>Experience</h3>
-            <p>3× Hackathon Winner<br/>SIH 2025 Selected<br/>1st Place AI/ML in HackSRM 7.0</p>
+            <p>3&times; Hackathon Winner<br/>SIH 2025 Selected<br/>1st Place AI/ML in HackSRM 7.0</p>
           </div>
           <div class="details-container">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 6 3 6 3s3 0 6-3v-5"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 6 3 6 3s3 0 6-3v-5"/></svg>
             <h3>Education</h3>
             <p>B.Tech CSE '28<br/>VIT-AP University</p>
           </div>
         </div>
         <div class="text-container">
           <p>
-            I'm a B.Tech CSE student at VIT‑AP who builds simple, useful web apps. Strong in DSA with 250+ LeetCode and 100+ GFG problems, focusing on C++/Java, OOPS, patterns, and time/space complexity. I work with Python (Flask/Django), SQLite/SQL, and REST APIs. Recent highlights include being a 3× hackathon winner (incl. D3 Hackathon, IIIT BH, HackSRM 7.0) and SIH 2025 selection.
+            I'm a B.Tech CSE student at VIT&#8209;AP who builds simple, useful web apps. Strong in DSA with 250+ LeetCode and 100+ GFG problems, focusing on C++/Java, OOPS, patterns, and time/space complexity. I work with Python (Flask/Django), SQLite/SQL, and REST APIs. Recent highlights include being a 3&times; hackathon winner (incl. D3 Hackathon, IIIT BH, HackSRM 7.0) and SIH 2025 selection.
           </p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Coding Stats -->
+  <section id="stats">
+    <p class="section__text__p1">live from the judges</p>
+    <h1 class="title">Coding Stats</h1>
+    <div class="stats-grid">
+
+      <div class="details-container stat-card" id="stat-codeforces">
+        <div class="stat-head">
+          <h3>Codeforces</h3>
+          <a href="https://codeforces.com/profile/Sushanksingh" target="_blank" rel="noopener" class="stat-handle">@Sushanksingh</a>
+        </div>
+        <div class="stat-body">
+          <div class="stat-primary">
+            <span class="stat-value" data-field="rating">&hellip;</span>
+            <span class="stat-label">rating</span>
+          </div>
+          <div class="stat-secondary" data-field="rank">fetching&hellip;</div>
+        </div>
+        <a href="https://codeforces.com/profile/Sushanksingh" target="_blank" rel="noopener" class="project-link">
+          View profile <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="details-container stat-card" id="stat-leetcode">
+        <div class="stat-head">
+          <h3>LeetCode</h3>
+          <a href="https://leetcode.com/u/sushankk00/" target="_blank" rel="noopener" class="stat-handle">@sushankk00</a>
+        </div>
+        <div class="stat-body">
+          <div class="stat-primary">
+            <span class="stat-value" data-field="solved">&hellip;</span>
+            <span class="stat-label">solved</span>
+          </div>
+          <div class="stat-secondary" data-field="breakdown">fetching&hellip;</div>
+        </div>
+        <a href="https://leetcode.com/u/sushankk00/" target="_blank" rel="noopener" class="project-link">
+          View profile <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="details-container stat-card" id="stat-gfg">
+        <div class="stat-head">
+          <h3>GeeksforGeeks</h3>
+          <a href="https://www.geeksforgeeks.org/profile/sushan2w35" target="_blank" rel="noopener" class="stat-handle">@sushan2w35</a>
+        </div>
+        <div class="stat-body">
+          <div class="stat-primary">
+            <span class="stat-value" data-field="solved">&hellip;</span>
+            <span class="stat-label">solved</span>
+          </div>
+          <div class="stat-secondary" data-field="breakdown">fetching&hellip;</div>
+        </div>
+        <a href="https://www.geeksforgeeks.org/profile/sushan2w35" target="_blank" rel="noopener" class="project-link">
+          View profile <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
   <!-- Experience -->
   <section id="experience">
-    <p class="section__text__p1">Explore My</p>
+    <p class="section__text__p1">explore my</p>
     <h1 class="title">Experience</h1>
     <div class="experience-details-container">
-      <div class="details-container">
-        <h2 class="experience-sub-title">Frontend Development</h2>
-        <div class="article-container">
-          <article>
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <div>
-              <h3>HTML</h3>
-              <p>Intermediate</p>
-            </div>
-          </article>
-          <article>
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <div>
-              <h3>CSS</h3>
-              <p>Basic</p>
-            </div>
-          </article>
-          <article>
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <div>
-              <h3>JavaScript</h3>
-              <p>Basic</p>
-            </div>
-          </article>
+
+      <div class="details-container skill-card">
+        <h2 class="experience-sub-title">Languages</h2>
+        <div class="tech-stack">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">C++</span>
+          <span class="tech-tag">Java</span>
+          <span class="tech-tag">SQL</span>
+          <span class="tech-tag">HTML5</span>
+          <span class="tech-tag">CSS3</span>
+          <span class="tech-tag">JavaScript</span>
         </div>
       </div>
-      <div class="details-container">
-        <h2 class="experience-sub-title">Backend &amp; DSA</h2>
-        <div class="article-container">
-          <article>
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <div>
-              <h3>Flask</h3>
-              <p>Experienced</p>
-            </div>
-          </article>
-          <article>
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <div>
-              <h3>Django</h3>
-              <p>Experienced</p>
-            </div>
-          </article>
-          <article>
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <div>
-              <h3>SQLite / SQL</h3>
-              <p>Intermediate</p>
-            </div>
-          </article>
-          <article>
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <div>
-              <h3>C++</h3>
-              <p>Experienced</p>
-            </div>
-          </article>
-          <article>
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <div>
-              <h3>Java</h3>
-              <p>Intermediate</p>
-            </div>
-          </article>
-          <article>
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <div>
-              <h3>Python</h3>
-              <p>Experienced</p>
-            </div>
-          </article>
+
+      <div class="details-container skill-card">
+        <h2 class="experience-sub-title">Backend</h2>
+        <div class="tech-stack">
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">Flask</span>
+          <span class="tech-tag">SQLAlchemy</span>
+          <span class="tech-tag">Alembic</span>
+          <span class="tech-tag">REST APIs</span>
+          <span class="tech-tag">JWT Authentication</span>
         </div>
       </div>
+
+      <div class="details-container skill-card">
+        <h2 class="experience-sub-title">Frontend</h2>
+        <div class="tech-stack">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Vite</span>
+          <span class="tech-tag">Tailwind CSS</span>
+          <span class="tech-tag">Axios</span>
+          <span class="tech-tag">React Router</span>
+        </div>
+      </div>
+
+      <div class="details-container skill-card">
+        <h2 class="experience-sub-title">Databases</h2>
+        <div class="tech-stack">
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">MySQL</span>
+          <span class="tech-tag">SQLite</span>
+        </div>
+      </div>
+
+      <div class="details-container skill-card">
+        <h2 class="experience-sub-title">DevOps &amp; Tools</h2>
+        <div class="tech-stack">
+          <span class="tech-tag">Docker</span>
+          <span class="tech-tag">Docker Compose</span>
+          <span class="tech-tag">Redis</span>
+          <span class="tech-tag">Celery</span>
+          <span class="tech-tag">Git</span>
+          <span class="tech-tag">GitHub</span>
+          <span class="tech-tag">GitHub Actions</span>
+          <span class="tech-tag">Render</span>
+        </div>
+      </div>
+
+      <div class="details-container skill-card">
+        <h2 class="experience-sub-title">Testing</h2>
+        <div class="tech-stack">
+          <span class="tech-tag">Pytest</span>
+          <span class="tech-tag">FastAPI Dependency Overrides</span>
+          <span class="tech-tag">Unit Testing</span>
+          <span class="tech-tag">Integration Testing</span>
+        </div>
+      </div>
+
+      <div class="details-container skill-card">
+        <h2 class="experience-sub-title">Machine Learning</h2>
+        <div class="tech-stack">
+          <span class="tech-tag">Scikit-learn</span>
+          <span class="tech-tag">Pandas</span>
+          <span class="tech-tag">NumPy</span>
+          <span class="tech-tag">Feature Engineering</span>
+          <span class="tech-tag">Model Evaluation</span>
+        </div>
+      </div>
+
+      <div class="details-container skill-card">
+        <h2 class="experience-sub-title">Relevant Coursework</h2>
+        <div class="tech-stack">
+          <span class="tech-tag">Data Structures &amp; Algorithms</span>
+          <span class="tech-tag">Object-Oriented Programming</span>
+          <span class="tech-tag">Database Management Systems</span>
+          <span class="tech-tag">Operating Systems</span>
+          <span class="tech-tag">Computer Networks</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- Projects -->
   <section id="projects">
-    <p class="section__text__p1">Browse My Recent</p>
+    <p class="section__text__p1">browse my recent</p>
     <h1 class="title">Projects</h1>
-    <div class="carousel-wrapper">
-      <button class="carousel-btn carousel-btn--left" aria-label="Previous" onclick="scrollCarousel(-1)">&#8249;</button>
-      <div class="carousel-track">
-        <div class="details-container project-card">
-          <h2 class="project-title">BullsBear Lab</h2>
-          <p class="project-desc">Demo trading web app to simulate buying/selling stocks with virtual currency. Live prices via Yahoo Finance, portfolio tracking, and transaction history. Built with Flask &amp; SQLite3. <strong>Solo project — completely built by me.</strong></p>
-          <div class="btn-container">
-            <a href="https://github.com/sushanksingh00/Finance-App" target="_blank" rel="noopener" class="btn btn-outline btn-sm">GitHub</a>
-          </div>
+
+    <div class="project-grid">
+
+      <!-- CP Bot -->
+      <div class="details-container project-card">
+        <div class="project-head">
+          <h2 class="project-title">CP Bot</h2>
+          <span class="role-tag role-solo">Solo</span>
         </div>
-        <div class="details-container project-card">
-          <h2 class="project-title">CareMap</h2>
-          <p class="project-desc">Web-based health assistant that suggests possible conditions from entered symptoms using the Gemini API. Includes login and saved history. Built with Flask &amp; SQLite. <strong>Solo project — completely built by me.</strong></p>
-          <div class="btn-container">
-            <a href="https://github.com/sushanksingh00/CareMap" target="_blank" rel="noopener" class="btn btn-outline btn-sm">GitHub</a>
-          </div>
+        <p class="project-desc">
+          AI-powered competitive-programming Discord bot: Codeforces profile analysis,
+          contest insights, problem recommendations, rating tracking, and coding
+          statistics, all inside Discord.
+        </p>
+        <div class="tech-stack">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Discord.py</span>
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">Redis</span>
+          <span class="tech-tag">Celery</span>
+          <span class="tech-tag">Codeforces API</span>
         </div>
-        <div class="details-container project-card">
-          <h2 class="project-title">Market Nearby</h2>
-          <p class="project-desc">Django app to find nearby shops (within 10 km) and check item availability, with roles for customer, shopkeeper, and admin. <strong>Solo project — completely built by me.</strong></p>
-          <div class="btn-container">
-            <a href="https://github.com/sushanksingh00/market-nearby" target="_blank" rel="noopener" class="btn btn-outline btn-sm">GitHub</a>
-          </div>
-        </div>
-        <div class="details-container project-card">
-          <h2 class="project-title">SafeMap</h2>
-          <p class="project-desc">Computes a safety index for road segments then recommends the safest route. <strong>Group project — my contributions: pothole detection API, ambulance siren detection ML model, and parts of the backend.</strong></p>
-          <div class="btn-container">
-            <a href="hhttps://github.com/Demoninfinity02/SafeMap" target="_blank" rel="noopener" class="btn btn-outline btn-sm">GitHub</a>
-          </div>
+        <div class="project-links">
+          <a href="https://github.com/sushanksingh00/cp-bot" target="_blank" rel="noopener" class="project-link">
+            View source <span aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="https://cp-bot-main.onrender.com" target="_blank" rel="noopener" class="project-link">
+            Live <span aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="https://youtu.be/SYv24VIP74I" target="_blank" rel="noopener" class="project-link">
+            Demo <span aria-hidden="true">&rarr;</span>
+          </a>
         </div>
       </div>
-      <button class="carousel-btn carousel-btn--right" aria-label="Next" onclick="scrollCarousel(1)">&#8250;</button>
+
+      <!-- BullsBear Lab -->
+      <div class="details-container project-card">
+        <div class="project-head">
+          <h2 class="project-title">BullsBear Lab</h2>
+          <span class="role-tag role-solo">Solo</span>
+        </div>
+        <p class="project-desc">
+          Virtual stock trading platform where users buy and sell stocks with simulated
+          currency &mdash; live market prices, portfolio management, transaction history,
+          and user authentication.
+        </p>
+        <div class="tech-stack">
+          <span class="tech-tag">Flask</span>
+          <span class="tech-tag">SQLite</span>
+          <span class="tech-tag">Yahoo Finance API</span>
+          <span class="tech-tag">HTML/CSS</span>
+          <span class="tech-tag">JavaScript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/sushanksingh00/Finance-App" target="_blank" rel="noopener" class="project-link">
+            View source <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- CareMap -->
+      <div class="details-container project-card">
+        <div class="project-head">
+          <h2 class="project-title">CareMap</h2>
+          <span class="role-tag role-solo">Solo</span>
+        </div>
+        <p class="project-desc">
+          AI-assisted health platform that analyzes user symptoms using the Gemini API,
+          maintains secure user accounts, and stores consultation history for future
+          reference.
+        </p>
+        <div class="tech-stack">
+          <span class="tech-tag">Flask</span>
+          <span class="tech-tag">SQLite</span>
+          <span class="tech-tag">Gemini API</span>
+          <span class="tech-tag">HTML/CSS</span>
+          <span class="tech-tag">JavaScript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/sushanksingh00/CareMap" target="_blank" rel="noopener" class="project-link">
+            View source <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Market Nearby -->
+      <div class="details-container project-card">
+        <div class="project-head">
+          <h2 class="project-title">Market Nearby</h2>
+          <span class="role-tag role-solo">Solo</span>
+        </div>
+        <p class="project-desc">
+          Full-stack marketplace platform that helps users locate nearby shops and check
+          product availability within a 10 km radius, with customer, shopkeeper, and
+          admin dashboards.
+        </p>
+        <div class="tech-stack">
+          <span class="tech-tag">Django</span>
+          <span class="tech-tag">SQLite</span>
+          <span class="tech-tag">HTML/CSS</span>
+          <span class="tech-tag">JavaScript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/sushanksingh00/market-nearby" target="_blank" rel="noopener" class="project-link">
+            View source <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- SafeMap -->
+      <div class="details-container project-card">
+        <div class="project-head">
+          <h2 class="project-title">SafeMap</h2>
+          <span class="role-tag role-team">Team</span>
+        </div>
+        <p class="project-desc">
+          Route recommendation system that computes road safety scores using computer
+          vision and machine learning to suggest safer travel routes. My contributions:
+          pothole detection API, ambulance siren detection model, and backend services.
+        </p>
+        <div class="tech-stack">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Computer Vision</span>
+          <span class="tech-tag">Machine Learning</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Demoninfinity02/SafeMap" target="_blank" rel="noopener" class="project-link">
+            View source <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- Contact -->
   <section id="contact">
-    <p class="section__text__p1">Get In Touch</p>
+    <p class="section__text__p1">get in touch</p>
     <h1 class="title">Contact Me</h1>
     <div class="contact-info-upper-container">
       <div class="contact-info-container">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         <p><a href="mailto:sushankk00@gmail.com">sushankk00@gmail.com</a></p>
       </div>
       <div class="contact-info-container">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
         <p><a href="https://www.linkedin.com/in/sushank-singh-92a80731a/" target="_blank" rel="noopener">LinkedIn</a></p>
       </div>
     </div>
@@ -257,17 +463,17 @@
     </div>
   </section>
 
-  <div class="advice" id="advice">A Random advice is being generated for you...</div>
-  <br>
-  <div class="advice" id="counter">Viewers Loading...</div>
+  <div class="advice" id="advice"><p>A random advice is being generated for you...</p></div>
+  <div class="advice" id="counter">Viewers loading...</div>
 
   <footer>
     <nav>
       <ul class="nav-links footer-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#stats">stats</a></li>
+        <li><a href="#experience">experience</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#contact">contact</a></li>
       </ul>
     </nav>
     <p>Copyright &copy; 2026 Sushank Singh. All Rights Reserved.</p>
@@ -281,11 +487,103 @@
       icon.classList.toggle('open');
     }
 
-    function scrollCarousel(direction) {
-      const track = document.querySelector('.carousel-track');
-      const cardWidth = track.querySelector('.project-card').offsetWidth + 24; // card + gap
-      track.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      try { localStorage.setItem('theme', theme); } catch (e) {}
     }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    }
+
+    (function initTheme() {
+      let saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
+      const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+      applyTheme(saved || (prefersLight ? 'light' : 'dark'));
+    })();
+
+    // ---- Live coding stats (Codeforces, LeetCode, GFG) ----
+    // Each fetch has a timeout and fails gracefully: on error the card
+    // just falls back to "view profile" instead of breaking.
+    function abortAfter(ms) {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), ms);
+      return { signal: controller.signal, clear: () => clearTimeout(timer) };
+    }
+
+    function markUnavailable(cardId) {
+      const card = document.getElementById(cardId);
+      if (!card) return;
+      card.querySelectorAll('[data-field]').forEach(el => {
+        if (el.dataset.field === 'rating' || el.dataset.field === 'solved') el.textContent = '—';
+        else el.textContent = 'live stats unavailable';
+      });
+    }
+
+    async function loadCodeforces() {
+      const cardId = 'stat-codeforces';
+      const { signal, clear } = abortAfter(7000);
+      try {
+        const res = await fetch('https://codeforces.com/api/user.info?handles=Sushanksingh', { signal });
+        clear();
+        const data = await res.json();
+        if (data.status !== 'OK') throw new Error('bad status');
+        const user = data.result[0];
+        const card = document.getElementById(cardId);
+        card.querySelector('[data-field="rating"]').textContent = user.rating ?? 'Unrated';
+        card.querySelector('[data-field="rank"]').textContent = user.rank
+          ? `${user.rank}${user.maxRating ? ` · max ${user.maxRating}` : ''}`
+          : 'no rated contests yet';
+      } catch (err) {
+        clear();
+        console.error('Codeforces stats unavailable:', err);
+        markUnavailable(cardId);
+      }
+    }
+
+    async function loadLeetCode() {
+      const cardId = 'stat-leetcode';
+      const { signal, clear } = abortAfter(7000);
+      try {
+        const res = await fetch('https://leetcode-stats.tashif.codes/sushankk00', { signal });
+        clear();
+        const data = await res.json();
+        if (data.status !== 'success') throw new Error('bad status');
+        const card = document.getElementById(cardId);
+        card.querySelector('[data-field="solved"]').textContent = data.totalSolved;
+        card.querySelector('[data-field="breakdown"]').textContent =
+          `${data.easySolved} easy · ${data.mediumSolved} med · ${data.hardSolved} hard`;
+      } catch (err) {
+        clear();
+        console.error('LeetCode stats unavailable:', err);
+        markUnavailable(cardId);
+      }
+    }
+
+    async function loadGfg() {
+      const cardId = 'stat-gfg';
+      const { signal, clear } = abortAfter(7000);
+      try {
+        const res = await fetch('https://gfg-stats.tashif.codes/sushan2w35', { signal });
+        clear();
+        const data = await res.json();
+        if (data.error || typeof data.totalProblemsSolved === 'undefined') throw new Error('bad response');
+        const card = document.getElementById(cardId);
+        card.querySelector('[data-field="solved"]').textContent = data.totalProblemsSolved;
+        card.querySelector('[data-field="breakdown"]').textContent =
+          `${data.Easy ?? 0} easy · ${data.Medium ?? 0} med · ${data.Hard ?? 0} hard`;
+      } catch (err) {
+        clear();
+        console.error('GFG stats unavailable:', err);
+        markUnavailable(cardId);
+      }
+    }
+
+    loadCodeforces();
+    loadLeetCode();
+    loadGfg();
 
     (async () => {
       try {
@@ -294,21 +592,19 @@
         const advice = data?.slip?.advice;
 
         if (advice) {
-          document.getElementById('advice').innerHTML = `<p>A Random advice - ${advice}</p>`;
+          document.getElementById('advice').innerHTML = `<p>A random advice &mdash; ${advice}</p>`;
         }
       } catch (err) {
         console.error('Failed to load advice:', err);
       }
     })();
-    
+
   </script>
   <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-analytics.js";
     import { getDatabase, ref, runTransaction, onValue } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-database.js";
-
-
 
     const firebaseConfig = {
       apiKey: "AIzaSyAXRdHvFURTp0yrPaqRiOXPZBPW13H13h4",
@@ -336,7 +632,7 @@
     onValue(visitRef, (snapshot) => {
       const value = snapshot.val();
       if (value !== 1) {
-        el.innerText = `You are the ${value}th Viewer`;
+        el.innerText = `You are the ${value}th viewer`;
       }
     });
 
